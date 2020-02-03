@@ -62,6 +62,8 @@ RUN /bin/bash -c "source activate base && \
     conda install --quiet --yes -c conda-forge openpyxl h5py matplotlib ; \
     conda upgrade --all -y ;\
     pip install opencv-python imgaug; \
+    pip install python-louvain --upgrade; \
+    pip install networkx --upgrade; \
     conda clean --all -y ; \
     python -m ipykernel install --user --name python37 --display-name 'Python 3.7' && \
     source deactivate &&\
